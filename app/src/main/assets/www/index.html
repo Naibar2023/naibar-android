@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Naibar</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<video id="video"></video>
+
+<div id="plist" class="screen">
+  <div class="brand"><img src="emblem.png" class="emb"><img src="logo.png" class="word"></div>
+  <div class="panel plpanel">
+    <div class="title">Playlists</div>
+    <div id="plList"></div><div id="plMsg" class="msg"></div>
+  </div>
+  <div class="hint"><span class="k ok">OK</span>open<span class="k arr">&#9654;</span>edit</div>
+</div>
+
+<div id="form" class="screen" style="display:none">
+  <div class="brand"><img src="emblem.png" class="emb"><img src="logo.png" class="word"><div id="welcome" class="welcome"></div></div>
+  <div class="panel formpanel">
+    <h1 id="formTitle">Add playlist</h1>
+    <label>Any name</label><input id="fName" type="text">
+    <label>Host (http://host:port)</label><input id="fHost" type="text" placeholder="http://example.com:8080">
+    <label>Username</label><input id="fUser" type="text">
+    <label>Password</label><input id="fPass" type="text">
+    <div class="btns"><div id="bSave" class="btn" tabindex="0">Save</div><div id="bDelete" class="btn" tabindex="0">Delete</div><div id="bCancel" class="btn" tabindex="0">Cancel</div></div>
+  </div>
+</div>
+
+<div id="home" class="screen" style="display:none">
+  <img src="emblem.png" class="emb tiny">
+  <div class="navbtns"><div id="hmBack" class="nb">Switch playlist</div></div>
+  <div id="homeTitle"></div><div id="clock"></div><div id="acct"></div>
+  <div class="orn"><span></span><i></i><span></span></div>
+  <div id="tiles">
+    <div class="tile t0">
+      <svg viewBox="0 0 64 64" width="84" height="84"><rect x="6" y="12" width="52" height="34" rx="3" fill="none" stroke="#e2bd6e" stroke-width="3"/><path d="M22 54h20M32 46v8" stroke="#e2bd6e" stroke-width="3" fill="none"/><path d="M27 22l12 7-12 7z" fill="#e2bd6e"/></svg>
+      <div class="tl">Live TV</div></div>
+    <div class="tile t1">
+      <svg viewBox="0 0 64 64" width="84" height="84"><rect x="8" y="10" width="48" height="44" rx="3" fill="none" stroke="#e2bd6e" stroke-width="3"/><path d="M18 10v44M46 10v44M8 22h10M8 32h10M8 42h10M46 22h10M46 32h10M46 42h10" stroke="#e2bd6e" stroke-width="3" fill="none"/></svg>
+      <div class="tl">Movies</div></div>
+    <div class="tile t2">
+      <svg viewBox="0 0 64 64" width="84" height="84"><rect x="14" y="8" width="42" height="30" rx="3" fill="none" stroke="#e2bd6e" stroke-width="3"/><rect x="8" y="18" width="42" height="30" rx="3" fill="#0b1a3a" stroke="#e2bd6e" stroke-width="3"/><rect x="2" y="28" width="42" height="28" rx="3" fill="#0b1a3a" stroke="#e2bd6e" stroke-width="3"/></svg>
+      <div class="tl">Series</div></div>
+    <div class="tile small"><div class="tl">Reload</div></div>
+    <div class="tile small"><div class="tl">Parental</div></div>
+    <div class="tile small"><div class="tl">Exit</div></div>
+  </div>
+</div>
+
+<div id="browse" class="screen" style="display:none">
+  <img src="emblem.png" class="emb tiny">
+  <div class="panel cats"><div class="title" id="leftTitle"></div><div id="leftList"></div></div>
+  <div class="panel chans"><div class="title" id="rightTitle"></div><div id="rightList"></div></div>
+  <div class="navbtns"><div id="nbView" class="nb">Tiles view</div><div id="nbBack" class="nb">Back</div><div id="nbHome" class="nb">Home</div></div>
+  <div id="browseMsg" class="msg"></div>
+  <div class="hint"><span class="k ok">OK</span>play or open<span class="k green"></span>tiles or list<span class="k red"></span>favorite</div>
+</div>
+
+<div id="searchBox" style="display:none"><div class="title">Search</div><input id="searchInput" type="text" placeholder="Type a name, then press OK"></div>
+
+<div id="chPanel" style="display:none"><div class="title">Channels</div><div id="chList"></div></div>
+<div id="bar" style="display:none">
+  <div id="barTitle"></div><div id="barSub"></div>
+  <div id="prog"><div id="progFill"></div></div><div id="barTimes"></div>
+  <div id="btns"></div>
+</div>
+<div id="buf" style="display:none">Buffering...</div>
+<div id="pinBox" style="display:none"><div id="pinTitle" class="title"></div><div id="pinDots"></div><div id="pinKeys"></div><div id="pinMsg" class="msg"></div></div>
+<div id="osd" style="display:none"></div>
+<script src="app.js"></script>
+</body></html>
